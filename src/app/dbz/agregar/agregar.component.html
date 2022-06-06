@@ -1,0 +1,27 @@
+<h3>Agregar <small>{{ nuevo.nombre }}</small></h3>
+<hr>
+
+<form (ngSubmit)="agregar()" action="">
+    <!-- <input 
+        type="text" 
+        placeholder="Nombre"
+        [value]="nuevo.nombre"
+        (input)="cambiarNombre($event)"
+        > -->
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre" 
+        [(ngModel)]="nuevo.nombre" 
+        >
+        <!-- 1) El atributo Propiedad name debe llevar el nombre de la propiedad -->
+        <!-- 2) Con los paréntesis emito el evento y con los corchetes asigno valores, -->
+        <!-- es lo que se llama Two Way Data Bunding -->
+    <input 
+        type="text" 
+        placeholder="Poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+        >
+    <button type="submit">Agregar</button>
+</form>
